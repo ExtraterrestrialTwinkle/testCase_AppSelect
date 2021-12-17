@@ -21,13 +21,13 @@ class ListViewModel : ViewModel() {
     val error: LiveData<Throwable>
         get() = errorLiveData
 
-    fun loadList(){
+    fun loadList(pageCount: Int){
         viewModelScope.launch {
             try{
-                movieListLiveData.postValue(repository.showMovieFeed())
-                } catch(t: Throwable){
-                    errorLiveData.postValue(t)
-                }
+                movieListLiveData.postValue(repository.showMovieFeed(pageCount))
+            } catch(t: Throwable){
+                errorLiveData.postValue(t)
+            }
         }
     }
 
