@@ -7,8 +7,8 @@ plugins {
 
 android {
     compileSdk 31
-    def localProperties = new Properties()
-    localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+    def grProperties = new Properties()
+    grProperties.load(new FileInputStream(rootProject.file("gradle.properties")))
 
     defaultConfig {
         applicationId "com.smolianinovasiuzanna.movielist"
@@ -34,7 +34,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-            buildConfigField("String", "API_KEY", "\"" + localProperties['API_KEY'] + "\"")
+            buildConfigField("String", "API_KEY", "\"" + grProperties['API_KEY'] + "\"")
         }
     }
     compileOptions {
