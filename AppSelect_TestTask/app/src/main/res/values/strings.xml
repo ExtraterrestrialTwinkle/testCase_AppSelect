@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MovieList</string>
+    <string name="video_list">Movie feed</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="the_new_york_times">The New York Times</string>
+    <string name="something_about_movie">Something about this movie. Something about this movie.Something about this movie. /n Something about this movie.Something about this movie.Something about this movie.</string>
+</resources>
